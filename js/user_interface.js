@@ -36,8 +36,8 @@ function UserInterface(parameters) {
 
     flip_container.className = 'flip-container hidden';
     flipper.className = 'flipper';
-    back.className = 'back coin-white';
-    front.className = 'front coin-' + type;
+    back.className = 'back block-white';
+    front.className = 'front block-' + type;
 
     flipper.appendChild(back);
     flipper.appendChild(front);

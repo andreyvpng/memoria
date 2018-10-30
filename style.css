@@ -60,39 +60,39 @@ button:active {
 }
 
 /*
-coin colors
+block colors
 */
 
-.coin-green {
+.block-green {
   background-color: #2ecc71;
 }
-.coin-blue {
+.block-blue {
   background-color: #3498db;
 }
-.coin-purple {
+.block-purple {
   background-color: #9b59b6;
 }
-.coin-red {
+.block-red {
   background-color: #e74c3c;
 }
-.coin-orange {
+.block-orange {
   background-color: #e67e22;
 }
-.coin-yellow {
+.block-yellow {
   background-color: #f1c40f;
 }
-.coin-black {
+.block-black {
   background-color: #34495e;
 }
-.coin-gray {
+.block-gray {
   background-color: #7f8c8d;
 }
-.coin-white {
+.block-white {
   background-color: #fff;
 }
 
 /*
-  flip coin
+  flip block
  */
  
 .flip-container.hidden .flipper, .flip-container.hidden .flipper {
