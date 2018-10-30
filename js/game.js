@@ -12,7 +12,7 @@ function Game() {
   function setDefaultSettings() {
     status = GAME_IS_NOT_STARTED;
     blocks = ['green', 'blue', 'purple', 'red', 'orange', 'yellow', 'black', 'gray'];
-    blocks.dublicateValues().shuffle();
+    blocks = shuffle( dublicateValues( blocks ) );
     runtime = 0;
     number_flips = 0;
     number_matches = 0;

@@ -1,21 +1,21 @@
 'use strict';
 
-Array.prototype.__proto__.shuffle = function() {
+function shuffle(array) {
   var randomIndex, tmp;
-  this.forEach(function(value, i, array) {
+  array.forEach(function(value, i, array) {
     randomIndex = Math.floor(Math.random() * i);
     tmp = array[i];
     array[i] = array[randomIndex];
     array[randomIndex] = tmp;
   });
 
-  return this;
+  return array;
 }
 
-Array.prototype.__proto__.dublicateValues = function() {
-  this.forEach(function(value, i, array) {
+function dublicateValues(array) {
+  array.forEach(function(value, i, array) {
     array.push(value);
   });
 
-  return this;
+  return array;
 }
