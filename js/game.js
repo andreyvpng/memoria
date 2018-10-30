@@ -90,6 +90,7 @@ function Game() {
 
   function reset() {
     status = GAME_RESET;
+    loop();
   }
 
   this.init = function() {
