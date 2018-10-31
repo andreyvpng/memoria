@@ -56,19 +56,18 @@ function Game() {
   }
 
   function loop() {
-    ui.updateTimer(runtime);
-    runtime++;
-
-    if (number_matches == blocks.length / 2) {
-      ui.setNullTime();
-      status = GAME_IS_WINNED;
-      return false;
-    }
-
     if (status == GAME_RESET) {
       ui.setNullTime();
       ui.hideGrid();
       ui.switchButton('start');
+      return false;
+    }
+
+    ui.updateTimer(runtime);
+    runtime++;
+
+    if (number_matches == blocks.length / 2) {
+      status = GAME_IS_WINNED;
       return false;
     }
 
@@ -90,7 +89,6 @@ function Game() {
 
   function reset() {
     status = GAME_RESET;
-    loop();
   }
 
   this.init = function() {
