@@ -33,10 +33,19 @@ function Game() {
       number_matches++;
     } else {
       setTimeout(function() {
-        last_block.classList.toggle('hidden'); elem.classList.toggle('hidden');
+        last_block.classList.toggle('hidden');
+        elem.classList.toggle('hidden');
+
+        // animation
+        last_block.classList.add('wrong');
+        elem.classList.add('wrong');
         last_block = null;
         is_ready = true;
       }, 600);
+
+      // delete class for animation
+      last_block.classList.remove('wrong');
+      elem.classList.remove('wrong');
       is_ready = false;
     }
   }
@@ -57,9 +66,6 @@ function Game() {
 
   function loop() {
     if (status == GAME_RESET) {
-      ui.setNullTime();
-      ui.hideGrid();
-      ui.switchButton('start');
       return false;
     }
 
@@ -89,6 +95,9 @@ function Game() {
 
   function reset() {
     status = GAME_RESET;
+    ui.setNullTime();
+    ui.hideGrid();
+    ui.switchButton('start');
   }
 
   this.init = function() {

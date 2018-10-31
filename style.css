@@ -103,6 +103,18 @@ block colors
   background-color: #fff;
 }
 
+.wrong {
+  animation: wrong 0.6s ease alternate;
+}
+
+@keyframes wrong {
+  0%,100% { transform: translate(0, 0); }
+  10%,50%,90% { transform: translate(2px, 2px); }
+  20%,60% { transform: translate(-2px, -2px); }
+  30%,70% { transform: translate(-2px, 2px); }
+  40%,80% { transform: translate(2px, -2px); }
+}
+
 /*
   flip block
  */
@@ -156,4 +168,3 @@ block colors
     height: 83px;
   }
 }
-
